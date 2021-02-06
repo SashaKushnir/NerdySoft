@@ -1,0 +1,20 @@
+.wholeNavBar {
+    display: grid;
+    grid-template-columns: 2.2fr 0.6fr 0.6fr 0.3fr 1fr;
+}
+.navLink{
+    text-decoration: none;
+    color: rgba(236, 230, 230, 0.685);
+    font-size: 110%;
+    text-align: right;
+}
+.active{
+    text-decoration: none;
+    color: rgba(255, 248, 248, 0.993);
+    font-size: 108%;
+    font-weight: bold;
+    text-align: right;
+}
+div:hover{
+    color :rgb(221, 215, 215)
+}
