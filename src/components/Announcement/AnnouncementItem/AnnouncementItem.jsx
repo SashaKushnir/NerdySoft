@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import NewAForm from '../../../common/Form/Form'
 import s from './AnnouncementItem.module.css'
 import TopItem from './TopItem'
-const AnnouncementItem = (props) => {
+ const AnnouncementItem =  React.memo((props) => {
     let [showDetails, setShowDetails] = useState(false)
     let [showForm, showFormToggle] = useState(false)
     let [showTop, showTopToggle] = useState(false)
@@ -55,8 +55,7 @@ const AnnouncementItem = (props) => {
         </div>
         <div></div>
     </div>
-}
-
+})
 export default AnnouncementItem
 
 const Functions = ({setShowDetails,showFormToggle,showTopToggle, showTop, removeItem, getTopTheSimiliar}) => {

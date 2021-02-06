@@ -13,6 +13,7 @@ function App() {
       <NavBar />
       <Switch>
         <Redirect exact from ='/' to ='/list'/>
+        <Redirect exact from ='/NedySoft/' to ='/list'/>
         <Route path ='/list' render = {() =><ListContainer />}/>
         <Route path ='/newAnnouncement' render = {() =><PushContainer />}/>
         <Route path = '/search' render = {() =><SearchContainer />}/>
