@@ -1,1 +1,0 @@
-export const getA = state => state.announcement
