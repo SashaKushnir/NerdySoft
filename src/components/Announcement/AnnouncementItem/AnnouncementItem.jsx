@@ -7,7 +7,8 @@ import TopItem from './TopItem'
     let [showForm, showFormToggle] = useState(false)
     let [showTop, showTopToggle] = useState(false)
     let [editSuccess, editSuccessToggle] = useState(false)
-    let top = props.MySimiliarArrayIndex.map(val => <TopItem aItem={val} />)
+    let top = props.MySimiliarArrayIndex.map(val => <TopItem removeItem = {props.removeItem} 
+        editAItem = {props.editAItem} aItem={val} />)
     // if(props.arrayDetails)
     // if(props.arrayDetails !== props.aItem.id)
     // showTopToggle(false)             UseEffect Or ComponentDidUpdateIsneeded//PureComponent

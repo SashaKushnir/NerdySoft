@@ -51,7 +51,13 @@ const postsInfoReducer = (anInfo = initialState, action)  => {
             return {
                 ...anInfo,
                 BasicAnnouncementList : changeArray,
-                ShowAList : changeArray 
+                ShowAList : changeArray,
+                SearchList : changeArray.filter((val)=> val.id === action.formObj.id),
+                MySimiliarArrayIndex : [...anInfo.MySimiliarArrayIndex.map(val => {
+                    if(val.id === action.formObj.id)
+                    return  action.formObj
+                    return val 
+                })]
             }
 
         case DELETE_ITEM : 
@@ -61,7 +67,8 @@ const postsInfoReducer = (anInfo = initialState, action)  => {
             return {
                 ...anInfo,
                 BasicAnnouncementList : deletedArray,
-                ShowAList : deletedArray
+                ShowAList : deletedArray,
+                SearchList : [...anInfo.SearchList.filter((val) => val.id !== action.removeId)]
             }
 
         case FIND_TOP_SIMILIAR: 
@@ -102,7 +109,7 @@ const postsInfoReducer = (anInfo = initialState, action)  => {
         
         return {
                 ...anInfo,
-                MySimiliarArrayIndex : finishUra
+                MySimiliarArrayIndex : finishUra,
             }
 
         case SET_ARRAY_DETAILS : 
